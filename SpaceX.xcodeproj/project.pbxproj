@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		9F4107DD280489D200C5C95C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4107DC280489D200C5C95C /* AppDelegate.swift */; };
 		9F4107DF280489D200C5C95C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4107DE280489D200C5C95C /* SceneDelegate.swift */; };
-		9F4107E1280489D200C5C95C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4107E0280489D200C5C95C /* ViewController.swift */; };
-		9F4107E4280489D200C5C95C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4107E2280489D200C5C95C /* Main.storyboard */; };
 		9F4107E6280489D300C5C95C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F4107E5280489D300C5C95C /* Assets.xcassets */; };
 		9F4107E9280489D300C5C95C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4107E7280489D300C5C95C /* LaunchScreen.storyboard */; };
+		9F4107F428048A4D00C5C95C /* PagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4107F328048A4D00C5C95C /* PagesVC.swift */; };
+		9F4107F628048A7200C5C95C /* Falcon1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4107F528048A7200C5C95C /* Falcon1VC.swift */; };
+		9F4107F828048AAF00C5C95C /* Falcon9VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4107F728048AAF00C5C95C /* Falcon9VC.swift */; };
+		9F4107FA28048AD800C5C95C /* FalconHeavyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4107F928048AD800C5C95C /* FalconHeavyVC.swift */; };
+		9F4107FC28048AF500C5C95C /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4107FB28048AF500C5C95C /* Starship.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F4107D9280489D200C5C95C /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4107DC280489D200C5C95C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F4107DE280489D200C5C95C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9F4107E0280489D200C5C95C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9F4107E3280489D200C5C95C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F4107E5280489D300C5C95C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F4107E8280489D300C5C95C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F4107EA280489D300C5C95C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F4107F328048A4D00C5C95C /* PagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesVC.swift; sourceTree = "<group>"; };
+		9F4107F528048A7200C5C95C /* Falcon1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Falcon1VC.swift; sourceTree = "<group>"; };
+		9F4107F728048AAF00C5C95C /* Falcon9VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Falcon9VC.swift; sourceTree = "<group>"; };
+		9F4107F928048AD800C5C95C /* FalconHeavyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconHeavyVC.swift; sourceTree = "<group>"; };
+		9F4107FB28048AF500C5C95C /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,56 @@
 			children = (
 				9F4107DC280489D200C5C95C /* AppDelegate.swift */,
 				9F4107DE280489D200C5C95C /* SceneDelegate.swift */,
-				9F4107E0280489D200C5C95C /* ViewController.swift */,
-				9F4107E2280489D200C5C95C /* Main.storyboard */,
-				9F4107E5280489D300C5C95C /* Assets.xcassets */,
+				9F4107F228048A0F00C5C95C /* Pages */,
+				9F4107FD28048B1300C5C95C /* ViewForVC */,
+				9F41080028048B4500C5C95C /* SettingVC */,
+				9F41080128048B5200C5C95C /* RocketLauncges */,
+				9F41080228048B6700C5C95C /* Model */,
 				9F4107E7280489D300C5C95C /* LaunchScreen.storyboard */,
 				9F4107EA280489D300C5C95C /* Info.plist */,
+				9F4107E5280489D300C5C95C /* Assets.xcassets */,
 			);
 			path = SpaceX;
+			sourceTree = "<group>";
+		};
+		9F4107F228048A0F00C5C95C /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				9F4107F328048A4D00C5C95C /* PagesVC.swift */,
+				9F4107F528048A7200C5C95C /* Falcon1VC.swift */,
+				9F4107F728048AAF00C5C95C /* Falcon9VC.swift */,
+				9F4107F928048AD800C5C95C /* FalconHeavyVC.swift */,
+				9F4107FB28048AF500C5C95C /* Starship.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		9F4107FD28048B1300C5C95C /* ViewForVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewForVC;
+			sourceTree = "<group>";
+		};
+		9F41080028048B4500C5C95C /* SettingVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SettingVC;
+			sourceTree = "<group>";
+		};
+		9F41080128048B5200C5C95C /* RocketLauncges */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RocketLauncges;
+			sourceTree = "<group>";
+		};
+		9F41080228048B6700C5C95C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +176,6 @@
 			files = (
 				9F4107E9280489D300C5C95C /* LaunchScreen.storyboard in Resources */,
 				9F4107E6280489D300C5C95C /* Assets.xcassets in Resources */,
-				9F4107E4280489D200C5C95C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +186,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F4107E1280489D200C5C95C /* ViewController.swift in Sources */,
 				9F4107DD280489D200C5C95C /* AppDelegate.swift in Sources */,
+				9F4107FC28048AF500C5C95C /* Starship.swift in Sources */,
+				9F4107F828048AAF00C5C95C /* Falcon9VC.swift in Sources */,
 				9F4107DF280489D200C5C95C /* SceneDelegate.swift in Sources */,
+				9F4107FA28048AD800C5C95C /* FalconHeavyVC.swift in Sources */,
+				9F4107F428048A4D00C5C95C /* PagesVC.swift in Sources */,
+				9F4107F628048A7200C5C95C /* Falcon1VC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9F4107E2280489D200C5C95C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9F4107E3280489D200C5C95C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9F4107E7280489D300C5C95C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +338,7 @@
 				INFOPLIST_FILE = SpaceX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,7 +350,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,7 +366,7 @@
 				INFOPLIST_FILE = SpaceX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +378,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
