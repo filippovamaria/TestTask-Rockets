@@ -37,9 +37,9 @@ class PageViewController: UIPageViewController {
         pageControl.addTarget(self, action: #selector(pageControlTapped(_:)), for: .valueChanged)
         
         let page1 = UINavigationController(rootViewController: Falcon1VC())
-        let page2 = Falcon9VC()
-        let page3 = FalconHeavyVC()
-        let page4 = StarshipVC()
+        let page2 = UINavigationController(rootViewController: Falcon9VC())
+        let page3 = UINavigationController(rootViewController: FalconHeavyVC())
+        let page4 = UINavigationController(rootViewController: StarshipVC())
         
         pages.append(page1)
         pages.append(page2)

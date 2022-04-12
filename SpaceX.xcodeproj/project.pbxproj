@@ -16,6 +16,17 @@
 		9F4107F828048AAF00C5C95C /* Falcon9VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4107F728048AAF00C5C95C /* Falcon9VC.swift */; };
 		9F4107FA28048AD800C5C95C /* FalconHeavyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4107F928048AD800C5C95C /* FalconHeavyVC.swift */; };
 		9F4107FC28048AF500C5C95C /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4107FB28048AF500C5C95C /* Starship.swift */; };
+		9F47385E2805C40700C8862F /* ViewForVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47385D2805C40700C8862F /* ViewForVC.swift */; };
+		9F4738602805C45F00C8862F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47385F2805C45F00C8862F /* Model.swift */; };
+		9F4738622805C48F00C8862F /* String + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4738612805C48F00C8862F /* String + extension.swift */; };
+		9F4738652805C4F300C8862F /* HorizontalBlockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4738642805C4F300C8862F /* HorizontalBlockCell.swift */; };
+		9F4738672805C52B00C8862F /* HorizontalBlockCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4738662805C52B00C8862F /* HorizontalBlockCVCell.swift */; };
+		9F4738692805C68200C8862F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4738682805C68200C8862F /* TableViewCell.swift */; };
+		9F47386B2805C6B500C8862F /* TableViewCellForStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47386A2805C6B500C8862F /* TableViewCellForStage.swift */; };
+		9F47386D2805C6CF00C8862F /* TableViewCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47386C2805C6CF00C8862F /* TableViewCellButton.swift */; };
+		9F47386F2805C70F00C8862F /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47386E2805C70F00C8862F /* SettingVC.swift */; };
+		9F4738712805C72D00C8862F /* RocketLaunchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4738702805C72D00C8862F /* RocketLaunchesVC.swift */; };
+		9F4738732805C75C00C8862F /* RocketLaunchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4738722805C75C00C8862F /* RocketLaunchCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +41,17 @@
 		9F4107F728048AAF00C5C95C /* Falcon9VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Falcon9VC.swift; sourceTree = "<group>"; };
 		9F4107F928048AD800C5C95C /* FalconHeavyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconHeavyVC.swift; sourceTree = "<group>"; };
 		9F4107FB28048AF500C5C95C /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		9F47385D2805C40700C8862F /* ViewForVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewForVC.swift; sourceTree = "<group>"; };
+		9F47385F2805C45F00C8862F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		9F4738612805C48F00C8862F /* String + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + extension.swift"; sourceTree = "<group>"; };
+		9F4738642805C4F300C8862F /* HorizontalBlockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalBlockCell.swift; sourceTree = "<group>"; };
+		9F4738662805C52B00C8862F /* HorizontalBlockCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalBlockCVCell.swift; sourceTree = "<group>"; };
+		9F4738682805C68200C8862F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		9F47386A2805C6B500C8862F /* TableViewCellForStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellForStage.swift; sourceTree = "<group>"; };
+		9F47386C2805C6CF00C8862F /* TableViewCellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellButton.swift; sourceTree = "<group>"; };
+		9F47386E2805C70F00C8862F /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		9F4738702805C72D00C8862F /* RocketLaunchesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchesVC.swift; sourceTree = "<group>"; };
+		9F4738722805C75C00C8862F /* RocketLaunchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +106,7 @@
 				9F4107F728048AAF00C5C95C /* Falcon9VC.swift */,
 				9F4107F928048AD800C5C95C /* FalconHeavyVC.swift */,
 				9F4107FB28048AF500C5C95C /* Starship.swift */,
+				9F4738632805C4CD00C8862F /* TableViewForVC */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -91,6 +114,7 @@
 		9F4107FD28048B1300C5C95C /* ViewForVC */ = {
 			isa = PBXGroup;
 			children = (
+				9F47385D2805C40700C8862F /* ViewForVC.swift */,
 			);
 			path = ViewForVC;
 			sourceTree = "<group>";
@@ -98,6 +122,7 @@
 		9F41080028048B4500C5C95C /* SettingVC */ = {
 			isa = PBXGroup;
 			children = (
+				9F47386E2805C70F00C8862F /* SettingVC.swift */,
 			);
 			path = SettingVC;
 			sourceTree = "<group>";
@@ -105,6 +130,8 @@
 		9F41080128048B5200C5C95C /* RocketLauncges */ = {
 			isa = PBXGroup;
 			children = (
+				9F4738702805C72D00C8862F /* RocketLaunchesVC.swift */,
+				9F4738722805C75C00C8862F /* RocketLaunchCell.swift */,
 			);
 			path = RocketLauncges;
 			sourceTree = "<group>";
@@ -112,8 +139,22 @@
 		9F41080228048B6700C5C95C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F47385F2805C45F00C8862F /* Model.swift */,
+				9F4738612805C48F00C8862F /* String + extension.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9F4738632805C4CD00C8862F /* TableViewForVC */ = {
+			isa = PBXGroup;
+			children = (
+				9F4738642805C4F300C8862F /* HorizontalBlockCell.swift */,
+				9F4738662805C52B00C8862F /* HorizontalBlockCVCell.swift */,
+				9F4738682805C68200C8862F /* TableViewCell.swift */,
+				9F47386A2805C6B500C8862F /* TableViewCellForStage.swift */,
+				9F47386C2805C6CF00C8862F /* TableViewCellButton.swift */,
+			);
+			path = TableViewForVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,12 +227,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4738692805C68200C8862F /* TableViewCell.swift in Sources */,
+				9F47386F2805C70F00C8862F /* SettingVC.swift in Sources */,
+				9F4738602805C45F00C8862F /* Model.swift in Sources */,
+				9F4738652805C4F300C8862F /* HorizontalBlockCell.swift in Sources */,
 				9F4107DD280489D200C5C95C /* AppDelegate.swift in Sources */,
 				9F4107FC28048AF500C5C95C /* Starship.swift in Sources */,
+				9F4738672805C52B00C8862F /* HorizontalBlockCVCell.swift in Sources */,
 				9F4107F828048AAF00C5C95C /* Falcon9VC.swift in Sources */,
 				9F4107DF280489D200C5C95C /* SceneDelegate.swift in Sources */,
 				9F4107FA28048AD800C5C95C /* FalconHeavyVC.swift in Sources */,
+				9F4738712805C72D00C8862F /* RocketLaunchesVC.swift in Sources */,
+				9F47386D2805C6CF00C8862F /* TableViewCellButton.swift in Sources */,
+				9F47385E2805C40700C8862F /* ViewForVC.swift in Sources */,
 				9F4107F428048A4D00C5C95C /* PagesVC.swift in Sources */,
+				9F4738732805C75C00C8862F /* RocketLaunchCell.swift in Sources */,
+				9F4738622805C48F00C8862F /* String + extension.swift in Sources */,
+				9F47386B2805C6B500C8862F /* TableViewCellForStage.swift in Sources */,
 				9F4107F628048A7200C5C95C /* Falcon1VC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
