@@ -27,6 +27,9 @@
 		9F47386F2805C70F00C8862F /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47386E2805C70F00C8862F /* SettingVC.swift */; };
 		9F4738712805C72D00C8862F /* RocketLaunchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4738702805C72D00C8862F /* RocketLaunchesVC.swift */; };
 		9F4738732805C75C00C8862F /* RocketLaunchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4738722805C75C00C8862F /* RocketLaunchCell.swift */; };
+		9F4738792808459900C8862F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4738782808459900C8862F /* NetworkService.swift */; };
+		9F47387B280845BB00C8862F /* NetworkServiceForRocketLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47387A280845BB00C8862F /* NetworkServiceForRocketLaunch.swift */; };
+		9F47387D280845DC00C8862F /* ModelLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47387C280845DC00C8862F /* ModelLaunch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		9F47386E2805C70F00C8862F /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		9F4738702805C72D00C8862F /* RocketLaunchesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchesVC.swift; sourceTree = "<group>"; };
 		9F4738722805C75C00C8862F /* RocketLaunchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunchCell.swift; sourceTree = "<group>"; };
+		9F4738782808459900C8862F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		9F47387A280845BB00C8862F /* NetworkServiceForRocketLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceForRocketLaunch.swift; sourceTree = "<group>"; };
+		9F47387C280845DC00C8862F /* ModelLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelLaunch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +97,9 @@
 				9F41080028048B4500C5C95C /* SettingVC */,
 				9F41080128048B5200C5C95C /* RocketLauncges */,
 				9F41080228048B6700C5C95C /* Model */,
-				9F4107E7280489D300C5C95C /* LaunchScreen.storyboard */,
 				9F4107EA280489D300C5C95C /* Info.plist */,
 				9F4107E5280489D300C5C95C /* Assets.xcassets */,
+				9F4107E7280489D300C5C95C /* LaunchScreen.storyboard */,
 			);
 			path = SpaceX;
 			sourceTree = "<group>";
@@ -106,7 +112,6 @@
 				9F4107F728048AAF00C5C95C /* Falcon9VC.swift */,
 				9F4107F928048AD800C5C95C /* FalconHeavyVC.swift */,
 				9F4107FB28048AF500C5C95C /* Starship.swift */,
-				9F4738632805C4CD00C8862F /* TableViewForVC */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				9F47385D2805C40700C8862F /* ViewForVC.swift */,
+				9F4738762808453600C8862F /* Cells */,
 			);
 			path = ViewForVC;
 			sourceTree = "<group>";
@@ -140,21 +146,32 @@
 			isa = PBXGroup;
 			children = (
 				9F47385F2805C45F00C8862F /* Model.swift */,
+				9F47387C280845DC00C8862F /* ModelLaunch.swift */,
 				9F4738612805C48F00C8862F /* String + extension.swift */,
+				9F4738772808456C00C8862F /* Network */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9F4738632805C4CD00C8862F /* TableViewForVC */ = {
+		9F4738762808453600C8862F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				9F4738682805C68200C8862F /* TableViewCell.swift */,
 				9F4738642805C4F300C8862F /* HorizontalBlockCell.swift */,
 				9F4738662805C52B00C8862F /* HorizontalBlockCVCell.swift */,
-				9F4738682805C68200C8862F /* TableViewCell.swift */,
 				9F47386A2805C6B500C8862F /* TableViewCellForStage.swift */,
 				9F47386C2805C6CF00C8862F /* TableViewCellButton.swift */,
 			);
-			path = TableViewForVC;
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9F4738772808456C00C8862F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9F4738782808459900C8862F /* NetworkService.swift */,
+				9F47387A280845BB00C8862F /* NetworkServiceForRocketLaunch.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,9 +259,12 @@
 				9F47385E2805C40700C8862F /* ViewForVC.swift in Sources */,
 				9F4107F428048A4D00C5C95C /* PagesVC.swift in Sources */,
 				9F4738732805C75C00C8862F /* RocketLaunchCell.swift in Sources */,
+				9F4738792808459900C8862F /* NetworkService.swift in Sources */,
 				9F4738622805C48F00C8862F /* String + extension.swift in Sources */,
 				9F47386B2805C6B500C8862F /* TableViewCellForStage.swift in Sources */,
 				9F4107F628048A7200C5C95C /* Falcon1VC.swift in Sources */,
+				9F47387D280845DC00C8862F /* ModelLaunch.swift in Sources */,
+				9F47387B280845BB00C8862F /* NetworkServiceForRocketLaunch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

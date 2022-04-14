@@ -25,6 +25,7 @@ struct Model: Decodable {
         var mass: Mass?
         var flickr_images: [String]?
         var name: String?
+        var id: String?
         var first_stage: First_stage?
         var second_stage: Second_stage?
         var payload_weights: [Payload_weights]? // index 0
@@ -72,3 +73,47 @@ struct Payload_weights: Decodable {
 }
 
 var parameters = ["Высота, mt", "Диаметр, mt", "Масса, kg", "Нагрузка, kg"]
+
+func createArrayForZeroSection(array: Model.RocketModel) -> [String] {
+    let valueForLine0 = array.first_flightString
+    
+    let valueForLine1 = array.country ?? ""
+    
+    let costDivided = (array.cost_per_launch ?? 0) / 1000000
+    let valueForLine2 = "$" + String(costDivided) + "млн"
+    
+    return [valueForLine0, valueForLine1, valueForLine2]
+}
+
+func createArrayForFirstSection(array: Model.RocketModel) -> [String] {
+    let valueForLine0 = String(array.first_stage?.engines ?? 0)
+
+    let valueForLine1 = String(array.first_stage?.fuel_amount_tons ?? 0)
+    
+    let valueForLine2 = String(array.first_stage?.burn_time_sec ?? 0)
+    
+    return [valueForLine0, valueForLine1, valueForLine2]
+}
+
+func createArrayForSecondSection(array: Model.RocketModel) -> [String] {
+    let valueForLine0 = String(array.second_stage?.engines ?? 0)
+
+    let valueForLine1 = String(array.second_stage?.fuel_amount_tons ?? 0)
+    
+    let valueForLine2 = String(array.second_stage?.burn_time_sec ?? 0)
+    
+    return [valueForLine0, valueForLine1, valueForLine2]
+}
+
+func createArrayForHorizontalBlock(array: Model.RocketModel) -> [String] {
+    let valueForLine0 = String(array.height?.meters ?? 0)
+
+    let valueForLine1 = String(array.diameter?.meters ?? 0)
+    
+    let valueForLine2 = String(Int(array.mass?.kg ?? 0))
+    
+    let payload = array.payload_weights ?? []
+    let valueForLine3 = String(payload[0].kg ?? 0)
+    
+    return [valueForLine0, valueForLine1, valueForLine2, valueForLine3]
+}

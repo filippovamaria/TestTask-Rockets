@@ -17,7 +17,7 @@ class HorizontalBlockCell: UITableViewCell {
         return layout
     }()
     
-    private lazy var horizontalBlockCV: UICollectionView = {
+    lazy var horizontalBlockCV: UICollectionView = {
         let photosCV = UICollectionView(frame: .zero,
                                         collectionViewLayout: layoutTableViewCell)
         photosCV.delegate = self
@@ -25,11 +25,11 @@ class HorizontalBlockCell: UITableViewCell {
         photosCV.register(HorizontalBlockCVCell.self,
                           forCellWithReuseIdentifier: "HorizontalBlockCVCell")
         photosCV.backgroundColor = .black
-        photosCV.isScrollEnabled = true
         photosCV.translatesAutoresizingMaskIntoConstraints = false
         return photosCV
     }()
     
+    var parametersValues: [String] = []
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -59,14 +59,15 @@ class HorizontalBlockCell: UITableViewCell {
 
 extension HorizontalBlockCell: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return parameters.count
+        return parametersValues.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HorizontalBlockCVCell", for: indexPath) as! HorizontalBlockCVCell
         cell.layer.cornerRadius = 30
         cell.clipsToBounds = true
-        self.reload()
+        cell.parameter.text = parameters[indexPath.row]
+        cell.parameterValue.text = parametersValues[indexPath.row]
         return cell
     }
     
@@ -84,9 +85,4 @@ extension HorizontalBlockCell {
         super.addSubview(view)
         sendSubviewToBack(contentView)
     }
-    
-    func reload() {
-        self.horizontalBlockCV.reloadData()
-    }
 }
-

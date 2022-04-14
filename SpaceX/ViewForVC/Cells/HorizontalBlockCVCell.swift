@@ -74,4 +74,3 @@ class HorizontalBlockCVCell: UICollectionViewCell {
                                      stack.leadingAnchor.constraint(equalTo: view.leadingAnchor)])
     }
 }
-
