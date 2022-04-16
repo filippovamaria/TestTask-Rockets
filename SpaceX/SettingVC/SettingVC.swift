@@ -8,7 +8,7 @@
 import UIKit
 
 class SettingVC: UIViewController {
-    
+
     private lazy var vcName: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 18)
@@ -58,14 +58,14 @@ class SettingVC: UIViewController {
     }()
     
     private lazy var segmentedControlDiameter: UISegmentedControl = {
-        let segmentedControlHeight = UISegmentedControl()
-        segmentedControlHeight.selectedSegmentTintColor = .white
-        segmentedControlHeight.backgroundColor = #colorLiteral(red: 0.07360426337, green: 0.07859290391, blue: 0.0785067156, alpha: 1)
-        segmentedControlHeight.insertSegment(withTitle: "m", at: 0, animated: false)
-        segmentedControlHeight.insertSegment(withTitle: "ft", at: 1, animated: false)
-        segmentedControlHeight.selectedSegmentIndex = 0
-        segmentedControlHeight.translatesAutoresizingMaskIntoConstraints = false
-        return segmentedControlHeight
+        let segmentedControlDiameter = UISegmentedControl()
+        segmentedControlDiameter.selectedSegmentTintColor = .white
+        segmentedControlDiameter.backgroundColor = #colorLiteral(red: 0.07360426337, green: 0.07859290391, blue: 0.0785067156, alpha: 1)
+        segmentedControlDiameter.insertSegment(withTitle: "m", at: 0, animated: false)
+        segmentedControlDiameter.insertSegment(withTitle: "ft", at: 1, animated: false)
+        segmentedControlDiameter.selectedSegmentIndex = 0
+        segmentedControlDiameter.translatesAutoresizingMaskIntoConstraints = false
+        return segmentedControlDiameter
     }()
     
     private lazy var weightLabel: UILabel = {
@@ -78,14 +78,14 @@ class SettingVC: UIViewController {
     }()
     
     private lazy var segmentedControlWeight: UISegmentedControl = {
-        let segmentedControlHeight = UISegmentedControl()
-        segmentedControlHeight.selectedSegmentTintColor = .white
-        segmentedControlHeight.backgroundColor = #colorLiteral(red: 0.07360426337, green: 0.07859290391, blue: 0.0785067156, alpha: 1)
-        segmentedControlHeight.insertSegment(withTitle: "kg", at: 0, animated: false)
-        segmentedControlHeight.insertSegment(withTitle: "lb", at: 1, animated: false)
-        segmentedControlHeight.selectedSegmentIndex = 0
-        segmentedControlHeight.translatesAutoresizingMaskIntoConstraints = false
-        return segmentedControlHeight
+        let segmentedControlWeight = UISegmentedControl()
+        segmentedControlWeight.selectedSegmentTintColor = .white
+        segmentedControlWeight.backgroundColor = #colorLiteral(red: 0.07360426337, green: 0.07859290391, blue: 0.0785067156, alpha: 1)
+        segmentedControlWeight.insertSegment(withTitle: "kg", at: 0, animated: false)
+        segmentedControlWeight.insertSegment(withTitle: "lb", at: 1, animated: false)
+        segmentedControlWeight.selectedSegmentIndex = 0
+        segmentedControlWeight.translatesAutoresizingMaskIntoConstraints = false
+        return segmentedControlWeight
     }()
     
     private lazy var payloadLabel: UILabel = {
@@ -98,14 +98,14 @@ class SettingVC: UIViewController {
     }()
     
     private lazy var segmentedControlPayload: UISegmentedControl = {
-        let segmentedControlHeight = UISegmentedControl()
-        segmentedControlHeight.selectedSegmentTintColor = .white
-        segmentedControlHeight.backgroundColor = #colorLiteral(red: 0.07360426337, green: 0.07859290391, blue: 0.0785067156, alpha: 1)
-        segmentedControlHeight.insertSegment(withTitle: "kg", at: 0, animated: false)
-        segmentedControlHeight.insertSegment(withTitle: "lb", at: 1, animated: false)
-        segmentedControlHeight.selectedSegmentIndex = 0
-        segmentedControlHeight.translatesAutoresizingMaskIntoConstraints = false
-        return segmentedControlHeight
+        let segmentedControlPayload = UISegmentedControl()
+        segmentedControlPayload.selectedSegmentTintColor = .white
+        segmentedControlPayload.backgroundColor = #colorLiteral(red: 0.07360426337, green: 0.07859290391, blue: 0.0785067156, alpha: 1)
+        segmentedControlPayload.insertSegment(withTitle: "kg", at: 0, animated: false)
+        segmentedControlPayload.insertSegment(withTitle: "lb", at: 1, animated: false)
+        segmentedControlPayload.selectedSegmentIndex = 0
+        segmentedControlPayload.translatesAutoresizingMaskIntoConstraints = false
+        return segmentedControlPayload
     }()
     
     override func viewDidLoad() {
@@ -135,7 +135,7 @@ class SettingVC: UIViewController {
         NSLayoutConstraint.activate([segmentedControlHeight.topAnchor.constraint(equalTo: closeButton.topAnchor, constant: 120),
                                      segmentedControlHeight.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
                                      segmentedControlHeight.heightAnchor.constraint(equalToConstant: 50),
-                                     segmentedControlHeight.widthAnchor.constraint(equalToConstant: 150)])
+                                     segmentedControlHeight.widthAnchor.constraint(equalToConstant: 130)])
         
         NSLayoutConstraint.activate([heightLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
                                      heightLabel.centerYAnchor.constraint(equalTo: segmentedControlHeight.centerYAnchor)])
@@ -143,7 +143,7 @@ class SettingVC: UIViewController {
         NSLayoutConstraint.activate([segmentedControlDiameter.topAnchor.constraint(equalTo: segmentedControlHeight.bottomAnchor, constant: 30),
                                      segmentedControlDiameter.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
                                      segmentedControlDiameter.heightAnchor.constraint(equalToConstant: 50),
-                                     segmentedControlDiameter.widthAnchor.constraint(equalToConstant: 150)])
+                                     segmentedControlDiameter.widthAnchor.constraint(equalToConstant: 130)])
         
         NSLayoutConstraint.activate([diameterLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
                                      diameterLabel.centerYAnchor.constraint(equalTo: segmentedControlDiameter.centerYAnchor)])
@@ -151,7 +151,7 @@ class SettingVC: UIViewController {
         NSLayoutConstraint.activate([segmentedControlWeight.topAnchor.constraint(equalTo: segmentedControlDiameter.bottomAnchor, constant: 30),
                                      segmentedControlWeight.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
                                      segmentedControlWeight.heightAnchor.constraint(equalToConstant: 50),
-                                     segmentedControlWeight.widthAnchor.constraint(equalToConstant: 150)])
+                                     segmentedControlWeight.widthAnchor.constraint(equalToConstant: 130)])
         
         NSLayoutConstraint.activate([weightLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
                                      weightLabel.centerYAnchor.constraint(equalTo: segmentedControlWeight.centerYAnchor)])
@@ -159,7 +159,7 @@ class SettingVC: UIViewController {
         NSLayoutConstraint.activate([segmentedControlPayload.topAnchor.constraint(equalTo: segmentedControlWeight.bottomAnchor, constant: 30),
                                      segmentedControlPayload.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
                                      segmentedControlPayload.heightAnchor.constraint(equalToConstant: 50),
-                                     segmentedControlPayload.widthAnchor.constraint(equalToConstant: 150)])
+                                     segmentedControlPayload.widthAnchor.constraint(equalToConstant: 130)])
         
         NSLayoutConstraint.activate([payloadLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
                                      payloadLabel.centerYAnchor.constraint(equalTo: segmentedControlPayload.centerYAnchor)])

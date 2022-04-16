@@ -7,8 +7,9 @@
 
 import UIKit
 
-// MARK: Подумать над названием
 class HorizontalBlockCell: UITableViewCell {
+    
+    var parametersValues: [String] = []
     
     private lazy var layoutTableViewCell: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -29,8 +30,6 @@ class HorizontalBlockCell: UITableViewCell {
         return photosCV
     }()
     
-    var parametersValues: [String] = []
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUpCell()
@@ -47,13 +46,7 @@ class HorizontalBlockCell: UITableViewCell {
                                      horizontalBlockCV.trailingAnchor.constraint(equalTo: self.trailingAnchor),
                                      horizontalBlockCV.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
                                      horizontalBlockCV.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-                                     horizontalBlockCV.heightAnchor.constraint(equalToConstant: 120)])
-    }
-    
-    private func itemSize(height: CGFloat, spacing: CGFloat) -> CGSize{
-        let neededWidth = height - spacing * 4.5
-        let itemWidth = neededWidth / 3.5
-        return CGSize(width: itemWidth, height: itemWidth)
+                                     horizontalBlockCV.heightAnchor.constraint(equalToConstant: 100)])
     }
 }
 
@@ -72,9 +65,7 @@ extension HorizontalBlockCell: UICollectionViewDelegateFlowLayout, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let spacing = (horizontalBlockCV.collectionViewLayout as? UICollectionViewFlowLayout)!.minimumInteritemSpacing
-        let width = collectionView.frame.height - 3 * spacing
-        return CGSize(width: width + 5, height: width)
+        return CGSize(width: collectionView.frame.height, height: collectionView.frame.height)
     }
     
     

@@ -14,9 +14,16 @@ protocol ViewForVCDelegate: AnyObject {
 
 class ViewForVC: UIView {
     
+    weak var delegate: ViewForVCDelegate?
+    private var tapSettingsButton = UITapGestureRecognizer()
+    var valuesForZeroSection: [String] = []
+    var valuesForFirstSection: [String] = []
+    var valuesForSecondSection: [String] = []
+    var parametersValuesView: [String] = []
+    
     private lazy var rocketImage: UIImageView = {
         let rocketImage = UIImageView()
-        rocketImage.backgroundColor = .gray
+        rocketImage.backgroundColor = .black
         rocketImage.translatesAutoresizingMaskIntoConstraints = false
         return rocketImage
     }()
@@ -33,6 +40,7 @@ class ViewForVC: UIView {
         let image = UIImageView()
         image.image = UIImage(systemName: "gearshape")
         image.tintColor = .systemGray5
+        image.alpha = 0
         image.isUserInteractionEnabled = true
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
@@ -66,13 +74,6 @@ class ViewForVC: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
-    
-    weak var delegate: ViewForVCDelegate?
-    private var tapSettingsButton = UITapGestureRecognizer()
-    var valuesForZeroSection: [String] = []
-    var valuesForFirstSection: [String] = []
-    var valuesForSecondSection: [String] = []
-    var parametersValuesView: [String] = []
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -130,7 +131,8 @@ class ViewForVC: UIView {
 
 extension ViewForVC {
     func setUpVC(array: Model.RocketModel) {
-        let url = URL(string: array.flickr_images?.randomElement() ?? "")
+        guard let images = array.flickr_images else { return }
+        let url = URL(string: images.randomElement() ?? "")
         if let data = try? Data(contentsOf: url!) {
             rocketImage.image = UIImage(data: data)
         }
@@ -225,7 +227,6 @@ extension ViewForVC: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return valuesForZeroSection.isEmpty ? 0 : 3
-//        return valuesForZeroSection.count
     }
     
     // MARK: Дорабоать
@@ -248,8 +249,6 @@ extension ViewForVC: UITableViewDataSource, UITableViewDelegate {
         header.textLabel?.textColor = .systemGray5
         header.textLabel?.font = .systemFont(ofSize: 17, weight: .bold)
     }
-    
-    // MARK: Подумать над реализацией тапа на ячейку именно
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 2 && indexPath.row == 3 {

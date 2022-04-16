@@ -8,14 +8,6 @@ import UIKit
 
 class StarshipVC: UIViewController {
     
-    private lazy var viewForVC: ViewForVC = {
-        let viewForVC = ViewForVC()
-        viewForVC.delegate = self
-        viewForVC.isUserInteractionEnabled = true
-        viewForVC.translatesAutoresizingMaskIntoConstraints = false
-        return viewForVC
-    }()
-
     private var tag = 3
     private var id: String?
     private let networkService = NetworkService()
@@ -25,9 +17,16 @@ class StarshipVC: UIViewController {
     private var valuesForSecondSectionVC: [String] = []
     private var parametersValuesVC: [String] = []
     
+    private lazy var viewForVC: ViewForVC = {
+        let viewForVC = ViewForVC()
+        viewForVC.delegate = self
+        viewForVC.isUserInteractionEnabled = true
+        viewForVC.translatesAutoresizingMaskIntoConstraints = false
+        return viewForVC
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
         setUpView()
 
         networkService.request { [self] (result) in
@@ -35,6 +34,7 @@ class StarshipVC: UIViewController {
             case .success(let rockets):
                 self.dataSource = rockets
                 self.viewForVC.setUpVC(array: (dataSource[tag]))
+                self.viewForVC.settingsButton.alpha = 1
                 self.valuesForZeroSectionVC = createArrayForZeroSection(array: dataSource[tag])
                 viewForVC.valuesForZeroSection = self.valuesForZeroSectionVC
                 self.valuesForFirstSectionVC = createArrayForFirstSection(array: dataSource[tag])

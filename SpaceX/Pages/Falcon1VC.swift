@@ -8,14 +8,6 @@ import UIKit
 
 class Falcon1VC: UIViewController {
     
-    private lazy var viewForVC: ViewForVC = {
-        let viewForVC = ViewForVC(frame: .zero)
-        viewForVC.delegate = self
-        viewForVC.isUserInteractionEnabled = true
-        viewForVC.translatesAutoresizingMaskIntoConstraints = false
-        return viewForVC
-    }()
-
     private var tag = 0
     private var id: String?
     private let networkService = NetworkService()
@@ -25,15 +17,23 @@ class Falcon1VC: UIViewController {
     private var valuesForSecondSectionVC: [String] = []
     private var parametersValuesVC: [String] = []
     
+    private lazy var viewForVC: ViewForVC = {
+        let viewForVC = ViewForVC(frame: .zero)
+        viewForVC.delegate = self
+        viewForVC.isUserInteractionEnabled = true
+        viewForVC.translatesAutoresizingMaskIntoConstraints = false
+        return viewForVC
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .cyan
         setUpView()
         
         networkService.request { [self] (result) in
             switch result {
             case .success(let rockets):
                 self.dataSource = rockets
+                self.viewForVC.settingsButton.alpha = 1
                 self.viewForVC.setUpVC(array: (dataSource[tag]))
                 self.valuesForZeroSectionVC = createArrayForZeroSection(array: dataSource[tag])
                 viewForVC.valuesForZeroSection = self.valuesForZeroSectionVC
@@ -70,7 +70,8 @@ extension Falcon1VC: ViewForVCDelegate {
     
     func didTapLaunchButton() {
         let rocketLaunchesVC  = RocketLaunchesVC()
-        rocketLaunchesVC.rocketID = dataSource[tag].id
+        guard let id = dataSource[tag].id else { return }
+        rocketLaunchesVC.rocketID = id
         navigationController?.pushViewController(rocketLaunchesVC, animated: true)
     }
 }

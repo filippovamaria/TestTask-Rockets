@@ -9,15 +9,6 @@ import UIKit
 
 class Falcon9VC: UIViewController {
     
-    private lazy var viewForVC: ViewForVC = {
-        let viewForVC = ViewForVC()
-        viewForVC.delegate = self
-        viewForVC.isUserInteractionEnabled = true
-        viewForVC.translatesAutoresizingMaskIntoConstraints = false
-        return viewForVC
-    }()
-   
-    
     private var tag = 1
     private var id: String?
     private let networkService = NetworkService()
@@ -27,15 +18,23 @@ class Falcon9VC: UIViewController {
     private var valuesForSecondSectionVC: [String] = []
     private var parametersValuesVC: [String] = []
     
+    private lazy var viewForVC: ViewForVC = {
+        let viewForVC = ViewForVC()
+        viewForVC.delegate = self
+        viewForVC.isUserInteractionEnabled = true
+        viewForVC.translatesAutoresizingMaskIntoConstraints = false
+        return viewForVC
+    }()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .purple
         setUpView()
 
         networkService.request { [self] (result) in
             switch result {
             case .success(let rockets):
                 self.dataSource = rockets
+                self.viewForVC.settingsButton.alpha = 1
                 self.viewForVC.setUpVC(array: (dataSource[tag]))
                 self.valuesForZeroSectionVC = createArrayForZeroSection(array: dataSource[tag])
                 viewForVC.valuesForZeroSection = self.valuesForZeroSectionVC

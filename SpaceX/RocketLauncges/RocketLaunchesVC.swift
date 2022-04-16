@@ -9,6 +9,10 @@ import UIKit
 
 class RocketLaunchesVC: UIViewController {
     
+    var rocketID: String?
+    private let networkServiceForRocketLaunch = NetworkServiceForRocketLaunch()
+    private var rocketLaunches: [ModelLaunch.Launch] = []
+    
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.rowHeight = UITableView.automaticDimension
@@ -22,16 +26,11 @@ class RocketLaunchesVC: UIViewController {
         return tableView
     }()
     
-    var rocketID: String?
-    private let networkServiceForRocketLaunch = NetworkServiceForRocketLaunch()
-    private var rocketLaunches: [ModelLaunch.Launch] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
         setUp()
         setUpBackButton()
-//        setupNavigationBar()
         
         networkServiceForRocketLaunch.request { [self] (result) in
             switch result {
@@ -87,6 +86,7 @@ class RocketLaunchesVC: UIViewController {
     }
 }
 
+
 extension RocketLaunchesVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rocketLaunches.count
@@ -94,20 +94,30 @@ extension RocketLaunchesVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "RocketLaunchCell", for: indexPath) as! RocketLaunchCell
+        
         cell.backgroundColor = .black
         cell.selectionStyle = .none
-        cell.launchName.text = rocketLaunches[indexPath.row].name
+        
+        if let name = rocketLaunches[indexPath.row].name {
+            cell.launchName.text = name
+        }
+        
         if rocketLaunches[indexPath.row].static_fire_date_utc != nil {
             cell.launchDate.text = rocketLaunches[indexPath.row].static_fire_date_utcString
         } else {
             cell.launchDate.text = "Информация отсутствует"
         }
         
-        if rocketLaunches[indexPath.row].success! && rocketLaunches[indexPath.row].success != nil {
-            cell.launchIcon.image = UIImage(named: "rocketSuc")
+        if rocketLaunches[indexPath.row].success != nil {
+            if rocketLaunches[indexPath.row].success! {
+                cell.launchIcon.image = UIImage(named: "rocketSuc")
+            } else {
+                cell.launchIcon.image = UIImage(named: "rocketUnsuc")
+            }
         } else {
-            cell.launchIcon.image = UIImage(named: "rocketUnsuc")
+            cell.launchIcon.image = UIImage(named: "rocketNoInfo")
         }
+        
         return cell
     }
 }

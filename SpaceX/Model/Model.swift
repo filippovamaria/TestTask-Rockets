@@ -32,7 +32,8 @@ struct Model: Decodable {
         var cost_per_launch: Int?
         var first_flight: String?
         var first_flightString: String {
-            return Model.dateFormatter.string(from: first_flight?.toDate() ?? Date())
+            guard let first_flight = first_flight else { return "" }
+            return Model.dateFormatter.string(from: first_flight.toDate() ?? Date())
         }
         var country: String?
     }
