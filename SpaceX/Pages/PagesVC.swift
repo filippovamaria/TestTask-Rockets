@@ -59,7 +59,6 @@ class PageViewController: UIPageViewController {
     
     private func layout() {
         view.addSubview(pageControl)
-//        pageControl.isHidden = false
         
         NSLayoutConstraint.activate([
             pageControl.widthAnchor.constraint(equalTo: view.widthAnchor),
